@@ -1,15 +1,15 @@
-# feature 'Viewing bookmarks' do
-#   feature 'visiting the homepage' do
-#     scenario 'visit the index page' do
-#     visit('/')
-#     expect(page).to have_content "Bookmark Manager"
-#   end
-#  end
-# end
+  feature 'visiting the homepage' do
+    scenario 'visit the index page' do
+      visit '/'
+
+    expect(page).to have_content "Bookmark Manager"
+  end
+ end
+
 
 feature 'Test bookmark route' do
   scenario 'Visit bookmarkroute' do
-    visit('/bookmarks')
+    visit'/bookmarks'
       expect(page).to have_content "http://www.makersacademy.com"
       expect(page).to have_content "http://www.destroyallsoftware.com"
       expect(page).to have_content "http://www.google.com"
