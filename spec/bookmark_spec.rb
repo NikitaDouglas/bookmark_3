@@ -1,4 +1,4 @@
-require 'bookmark'
+require './lib/bookmark.rb'
 
 describe Bookmark do
   describe '.all' do

@@ -1,11 +1,11 @@
+feature 'Viewing bookmarks' do
   feature 'visiting the homepage' do
-    scenario 'visit the index page' do
+    scenario 'the page title is visible' do
       visit '/'
-
-    expect(page).to have_content "Bookmark Manager"
+      expect(page).to have_content 'Bookmark Manager'
+    end
   end
- end
-
+end
 
 feature 'Test bookmark route' do
   scenario 'Visit bookmarkroute' do
