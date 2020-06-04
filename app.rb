@@ -12,7 +12,11 @@ class BookmarkManager < Sinatra::Base
       erb :bookmark
     end
 
-    post '/bookmark_added' do
+    post '/adds_bookmark' do
+      redirect('/bookmark_added')
+    end
+
+    get '/bookmark_added' do
       'Successfully added!'
     end
 
