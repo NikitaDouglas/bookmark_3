@@ -1,14 +1,14 @@
 # Bookmark web-app
 The website will have the following specification:
 
-* Show a list of bookmarks
-* Add new bookmarks
-* Delete bookmarks
-* Update bookmarks
-* Comment on bookmarks
-* Tag bookmarks into categories
-* Filter bookmarks by tag
-* Users are restricted to manage only their own bookmarks
+[x] Show a list of bookmarks
+[ ] Add new bookmarks
+[ ] Delete bookmarks
+[ ] Update bookmarks
+[ ] Comment on bookmarks
+[ ] Tag bookmarks into categories
+[ ] Filter bookmarks by tag
+[ ] Users are restricted to manage only their own bookmarks
 
 
 # Stories n.1
@@ -25,7 +25,7 @@ Bookmark		     #show_list
 # Stories n.2
 * As a time-pressed user
 * So that I can save a website
-* I would like to add the site's address and title to bookmark manager
+* I would like to add the website's url to our bookmark manager
 
 
 # DATABASE COMMAND INSTRUCTIONS
