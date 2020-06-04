@@ -9,15 +9,15 @@ class Bookmark
     end
 
     result = connection.exec("SELECT * FROM bookmarks")
-    result.map { |bookmark| bookmark['url'] }
+    result.map { |bookmark| {bookmark['url'].to_sym => bookmark['title']} }
   end
 
-  def self.create(url)
+  def self.create(title, url)
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'bookmark_manager_test')
     else
       connection = PG.connect(dbname: 'bookmark_manager')
     end
-      connection.exec("INSERT INTO bookmarks (url) VALUES ('#{url}');")
+      connection.exec("INSERT INTO bookmarks (url, title) VALUES ('#{url}', '#{title}');")
   end
 end

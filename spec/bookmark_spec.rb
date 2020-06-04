@@ -4,9 +4,9 @@ describe Bookmark do
   describe '.all' do
     it 'returns all bookmarks' do
 
-      Bookmark.create('http://www.makersacademy.com')
-      Bookmark.create('http://www.destroyallsoftware.com')
-      Bookmark.create('http://www.google.com')
+      Bookmark.create('Makers website', 'http://www.makersacademy.com')
+      Bookmark.create('Destroyal', 'http://www.destroyallsoftware.com')
+      Bookmark.create('Google', 'http://www.google.com')
 
       bookmarks = Bookmark.all
 
@@ -19,7 +19,7 @@ describe Bookmark do
   describe '.create(url)' do
     it 'add a bookmark to the db' do
 
-      Bookmark.create('http://facebook.com')
+      Bookmark.create('Facebook', 'http://facebook.com')
 
       expect(Bookmark.all).to include('http://facebook.com')
     end

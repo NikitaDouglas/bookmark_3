@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 
 <ul>
-  <% @bookmarks.each do |bookmark| %>
-    <a href=<%= bookmark %> target='blank'><li><%= bookmark %></li></a>
+  <% @bookmarks.each do |url, title| %>
+    <a href=<%url%> target='blank'><li><%= title %></li></a>
   <% end %>
 </ul>
 <br>
 <form action = '/adds_bookmark' method = 'post'>
   <h4>To add a new bookmark, enter a website address below!</h4>
+  <label>Bookmark's title
+    <input type = 'text' name = 'title'>
+  </label>
+  <br/>
+ <label>Bookmark's url
   <input type = 'text' name = 'url'>
+ </label>
+ 
   <input type = 'submit' value = 'Add'>
 </form>
