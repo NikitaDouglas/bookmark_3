@@ -1,4 +1,4 @@
-# Bookmark
+# Bookmark web-app
 The website will have the following specification:
 
 * Show a list of bookmarks
@@ -11,25 +11,42 @@ The website will have the following specification:
 * Users are restricted to manage only their own bookmarks
 
 
-
-As a user
-I can remember my bookmarks
-I want to be able to save them.
+# Stories n.1
+* As a time-pressed user
+* So that I can quickly go to web sites I regularly visit
+* I would like to see a list of bookmarks
 
 Class 			|    Methods
 Bookmark		     #save_list
 
-As a user
-I can see my stored bookmarks
-I want to be able to see them.
-
 Class 			|    Methods
 Bookmark		     #show_list
 
+# Stories n.2
+* As a time-pressed user
+* So that I can save a website
+* I would like to add the site's address and title to bookmark manager
 
-As a time-pressed user
-So that I can quickly go to web sites I regularly visit
-I would like to see a list of bookmarks
+
+# DATABASE COMMAND INSTRUCTIONS
+
+1. psql
+2. CREATE DATABASE bookmark_manager;
+3. \c bookmark_manager;
+4. \dt
+5. CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
+
+First lets create a directory for the database setup called db, and a sub-directory within it, migrations.
+
+1. - db/
+2.   - migrations/
+3. 01_create_bookmarks_table.sql
+
+# Stories n.3
+
+* As a time-pressed user
+* So that I can quickly go to web sites I regularly visit
+* I would like to see a list of bookmarks
 
 
 Follow these steps to set up the bookmarks_manager database:
