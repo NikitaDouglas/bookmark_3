@@ -5,3 +5,9 @@
     <li><%= bookmark %></li>
   <% end %>
 </ul>
+<br>
+<form action = '/bookmark_added' method = 'post'>
+  <h4>To add a new bookmark, enter a website address below!</h4>
+  <input type = 'text' name = 'url'>
+  <input type = 'submit' value = 'Add'>
+</form>
