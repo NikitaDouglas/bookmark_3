@@ -2,7 +2,7 @@
 
 <ul>
   <% @bookmarks.each do |bookmark| %>
-    <li><%= bookmark %></li>
+    <a href=<%= bookmark %> target='blank'><li><%= bookmark %></li></a>
   <% end %>
 </ul>
 <br>
