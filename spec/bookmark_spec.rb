@@ -10,9 +10,9 @@ describe Bookmark do
 
       bookmarks = Bookmark.all
 
-      expect(bookmarks).to include("http://www.makersacademy.com")
-      expect(bookmarks).to include("http://www.destroyallsoftware.com")
-      expect(bookmarks).to include("http://www.google.com")
+      expect(bookmarks).to include({:title=>"Makers website", :url=>"http://www.makersacademy.com"})
+      expect(bookmarks).to include({:title=>"Destroyal", :url=>"http://www.destroyallsoftware.com"})
+      expect(bookmarks).to include({:title=>"Google", :url=>"http://www.google.com"})
     end
   end
 
@@ -21,7 +21,7 @@ describe Bookmark do
 
       Bookmark.create('Facebook', 'http://facebook.com')
 
-      expect(Bookmark.all).to include('http://facebook.com')
+      expect(Bookmark.all).to include({:title=>"Facebook", :url=>"http://facebook.com"})
     end
   end
 end

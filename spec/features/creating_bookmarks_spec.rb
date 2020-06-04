@@ -5,6 +5,6 @@ feature 'create a new bookmark' do
     fill_in 'url', with: 'https://facebook.com'
     click_button 'Add'
     visit('/bookmarks')
-    expect(page).to have_content('https://facebook.com')
+    expect(page).to have_content('Facebook')
   end
 end

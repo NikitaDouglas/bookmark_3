@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <ul>
-  <% @bookmarks.each do |url, title| %>
-    <a href=<%url%> target='blank'><li><%= title %></li></a>
+  <% @bookmarks.each do |bookmark| %>
+    <li><a href=<%=bookmark[:url]%> target = 'blank'> <%= bookmark[:title] %></a></li>
   <% end %>
 </ul>
 <br>
@@ -15,6 +15,6 @@
  <label>Bookmark's url
   <input type = 'text' name = 'url'>
  </label>
- 
+
   <input type = 'submit' value = 'Add'>
 </form>

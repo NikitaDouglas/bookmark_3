@@ -9,7 +9,7 @@ class Bookmark
     end
 
     result = connection.exec("SELECT * FROM bookmarks")
-    result.map { |bookmark| {bookmark['url'].to_sym => bookmark['title']} }
+    result.map { |bookmark| {:url => bookmark['url'], :title => bookmark['title']} }
   end
 
   def self.create(title, url)
