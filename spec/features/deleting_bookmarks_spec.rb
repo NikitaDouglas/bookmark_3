@@ -8,7 +8,7 @@ feature 'deleting bookmark' do
     connection.exec("INSERT INTO bookmarks (url, title) VALUES('http://www.facebook.com', 'Facebook');")
 
 
-    visit '/bookmark/delete'
+    visit '/bookmarks/delete'
     fill_in 'title', with: 'Facebook'
     click_button 'Delete'
     expect(page).to_not have_content('Facebook')

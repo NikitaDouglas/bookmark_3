@@ -23,6 +23,15 @@ class BookmarkManager < Sinatra::Base
       'Successfully added!'
     end
 
+    get '/bookmarks/delete' do
+      erb :bookmark_delete
+    end
+
+    post '/bookmarks/delete' do
+      Bookmark.delete(params[:title])
+      redirect('/bookmarks')
+    end
+
     run! if app_file == $0
 
 end
